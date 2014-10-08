@@ -244,7 +244,7 @@ def rdann(record, annotator, start=0, end=-1, types=[]):
         if anntype == 59:
             annot.append(arr[i+3, 1] >> 2)
             annot_time.append(arr[i+2, 0] + (arr[i+2, 1] << 8) +
-                              (arr[i+1, 0] << 16) + arr[i+1, 1] << 24)
+                              (arr[i+1, 0] << 16) + (arr[i+1, 1] << 24))
             i += 3
         elif anntype in [60, 61, 62]:
             pass
